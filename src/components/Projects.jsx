@@ -161,7 +161,7 @@ const Projects = () => {
                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-200"
                     onClick={() => toggleDetails('project1')}
                   >
-                    View Projects
+                    View Cases
                   </button>
                 </div>
               </div>
@@ -230,7 +230,7 @@ const Projects = () => {
                     className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-200"
                     onClick={() => toggleDetails('project2')}
                   >
-                    View Projects
+                    View Cases
                   </button>
                 </div>
               </div>
