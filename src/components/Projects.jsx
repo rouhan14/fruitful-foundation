@@ -199,7 +199,7 @@ const Projects = () => {
                 </li>
               </ul>
               <button
-                className="mt-6 bg-red-500 text-gray-700 px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-200"
+                className="mt-6 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-200"
                 onClick={() => toggleDetails('project1')}
               >
                 Back
