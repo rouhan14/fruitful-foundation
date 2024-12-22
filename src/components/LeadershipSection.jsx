@@ -9,7 +9,7 @@ const LeadershipSection = () => {
       <div className="flex flex-wrap items-start mb-16 px-4 bg-white shadow-md rounded-lg transition-shadow duration-300 hover:shadow-xl">
         <div className="flex justify-center w-full sm:w-1/3 p-4 text-center">
           <img
-            src="/rayan1.JPG"
+            src="/rayan.JPG"
             alt="Rayan Malik"
             className="object-center rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-110 mx-auto"
             style={{ width: '60%', height: '250px' }}
