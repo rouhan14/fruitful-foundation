@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body {
+    font-family: 'Dancing Script', cursive;
+}
+   */
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+  
