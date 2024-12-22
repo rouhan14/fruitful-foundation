@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation(); // Get the current URL path
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -10,6 +11,12 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false); 
+  };
+
+  const getLinkClass = (path) => {
+    return location.pathname === path
+      ? 'text-lg font-medium hover:font-semibold cursor-pointer py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-red-700 underline'
+      : 'text-lg font-medium hover:font-semibold cursor-pointer py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-red-700';
   };
 
   return (
@@ -23,14 +30,14 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex items-center justify-center flex-grow gap-8">
           <Link
-            className="text-lg font-medium hover:font-semibold cursor-pointer py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-red-700"
+            className={getLinkClass('/')}
             to="/"
             onClick={closeMenu}
           >
             Home
           </Link>
           <Link
-            className="text-lg font-medium hover:font-semibold cursor-pointer py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-red-700"
+            className={getLinkClass('/projects')}
             to="/projects"
             onClick={closeMenu}
           >
@@ -74,14 +81,14 @@ const Navbar = () => {
       >
         <div className="flex flex-col items-center space-y-4">
           <Link
-            className="text-lg font-medium hover:font-semibold cursor-pointer py-2 px-4 w-full text-center rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-red-700"
+            className={getLinkClass('/')}
             to="/"
             onClick={closeMenu}
           >
             Home
           </Link>
           <Link
-            className="text-lg font-medium hover:font-semibold cursor-pointer py-2 px-4 w-full text-center rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-red-700"
+            className={getLinkClass('/projects')}
             to="/projects"
             onClick={closeMenu}
           >
