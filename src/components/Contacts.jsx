@@ -6,8 +6,8 @@ const Contacts = () => {
   return (
     <>
       {/* Background with gradient animation using Tailwind CSS */}
-      <div className="absolute top-0 z-[-2] h-screen w-screen bg-gradient-to-tl from-[#ffffff] via-[#F4F6F9] to-[#E0E5EC] animate-pulse"></div>
-      <div className="min-h-screen flex flex-col items-center justify-center py-16 px-6 bg-white relative z-10">
+      <div className="absolute top-0 z-[-2] h-screen w-full bg-gradient-to-tl from-[#ffffff] via-[#F4F6F9] to-[#E0E5EC] animate-pulse"></div>
+      <div className="min-h-screen w-full flex flex-col items-center justify-center py-16 px-6 bg-white relative z-10 overflow-x-hidden">
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#e13333] mb-12 text-center tracking-wider font-roboto transition-all duration-300 ease-in-out">
           Get in Touch
         </h1>
