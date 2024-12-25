@@ -152,7 +152,7 @@ const Projects = () => {
                 />
                 <div className="ml-6">
                   <h2 className="text-2xl font-semibold text-[#D5435C] mb-4">
-                    Fruitful Educations
+                    Fruitful Education
                   </h2>
                   <p className="text-lg text-gray-700 mb-4 leading-relaxed">
                   Providing educational support to underprivileged children by addressing financial barriers and enabling uninterrupted learning opportunities.
@@ -170,7 +170,7 @@ const Projects = () => {
             // Detailed View for Project 1
             <div>
               <h2 className="text-2xl font-semibold text-[#D5435C] mb-4">
-              Fruitful Educations
+              Fruitful Education
               </h2>
               <ul className="space-y-4 text-lg text-gray-700">
                 <li className="p-4 rounded-lg bg-gray-50 shadow-md">
@@ -221,7 +221,7 @@ const Projects = () => {
                 />
                 <div className="ml-6">
                   <h2 className="text-2xl font-semibold text-[#D5435C] mb-4">
-                  Fruitful Households
+                  Fruitful Household
                   </h2>
                   <p className="text-lg text-gray-700 mb-4 leading-relaxed">
                   Supporting families in financial distress by providing essentials, education, and care for those struggling to make ends meet.
@@ -239,7 +239,7 @@ const Projects = () => {
             // Detailed View for Project 2
             <div>
               <h2 className="text-2xl font-semibold text-[#D5435C] mb-4">
-                Fruitful Households
+                Fruitful Household
               </h2>
               <ul className="space-y-4 text-lg text-gray-700">
                 <li className="p-4 rounded-lg bg-gray-50 shadow-md">
