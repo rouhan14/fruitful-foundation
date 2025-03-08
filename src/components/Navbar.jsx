@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation(); // Get the current URL path
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -28,22 +28,24 @@ const Navbar = () => {
             <span className="font-semibold text-white text-2xl hover:text-yellow-400 transition-colors duration-300">Fruitful Foundation</span>
           </Link>
         </div>
-        <div className="hidden md:flex items-center justify-center flex-grow gap-8">
-          <Link
-            className={getLinkClass('/')}
-            to="/"
-            onClick={closeMenu}
-          >
+        <div className="hidden md:flex items-center justify-center flex-grow gap-10">
+          <Link className={getLinkClass('/')} to="/" onClick={closeMenu}>
             Home
           </Link>
-          <Link
-            className={getLinkClass('/projects')}
-            to="/projects"
-            onClick={closeMenu}
-          >
+          <Link className={getLinkClass('/about')} to="/about" onClick={closeMenu}>
+            About
+          </Link>
+          <Link className={getLinkClass('/blogs')} to="/blogs" onClick={closeMenu}>
+            Blogs
+          </Link>
+          <Link className={getLinkClass('/team')} to="/team" onClick={closeMenu}>
+            Team
+          </Link>
+          <Link className={getLinkClass('/projects')} to="/projects" onClick={closeMenu}>
             Our Projects
           </Link>
         </div>
+
 
         <div className="hidden md:block">
           <Link to="/contacts">
@@ -80,20 +82,22 @@ const Navbar = () => {
         className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-red-700 text-white py-4 px-6 rounded-lg transition-all duration-300`}
       >
         <div className="flex flex-col items-center space-y-4">
-          <Link
-            className={getLinkClass('/')}
-            to="/"
-            onClick={closeMenu}
-          >
+        <Link className={getLinkClass('/')} to="/" onClick={closeMenu}>
             Home
           </Link>
-          <Link
-            className={getLinkClass('/projects')}
-            to="/projects"
-            onClick={closeMenu}
-          >
+          <Link className={getLinkClass('/about')} to="/about" onClick={closeMenu}>
+            About
+          </Link>
+          <Link className={getLinkClass('/blogs')} to="/blogs" onClick={closeMenu}>
+            Blogs
+          </Link>
+          <Link className={getLinkClass('/team')} to="/team" onClick={closeMenu}>
+            Team
+          </Link>
+          <Link className={getLinkClass('/projects')} to="/projects" onClick={closeMenu}>
             Our Projects
           </Link>
+
           <Link
             className="w-full"
             to="/contacts"

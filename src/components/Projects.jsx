@@ -1,144 +1,83 @@
-import React, { useState } from 'react';
+import React from "react";
+
+const projects = [
+  {
+    title: "Fruitful Education: Sponsor-A-Child Program",
+    description:
+      "Education should never be a privilege—it should be a right. Through our Sponsor-A-Child Program, we provide financial aid that covers tuition fees, school supplies, uniforms, and other essential educational expenses. This initiative connects compassionate sponsors with students in need, fostering a cycle of opportunity and empowerment.",
+    image: "/education.jpg",
+  },
+  {
+    title: "Fruitful Business Start-Up Support",
+    description:
+      "The Fruitful Business Start-Up Support project is designed to help individuals launch their own businesses and support their households. We offer comprehensive training in business planning, marketing, and financial management. Additionally, we provide access to microloans and networking opportunities to ensure that aspiring entrepreneurs have the tools they need to succeed. ",
+    image: "/business.jpg",
+  },
+  {
+    title: "Fruitful Women Empowerment Program",
+    description:
+    "Our Fruitful Women Empowerment Program aims to provide women with the skills and resources they need to earn a sustainable living. Through vocational training, financial literacy workshops, and mentorship, we empower women to become self-reliant and confident in their abilities. Our goal is to create a supportive community where women can thrive and contribute to their households and society. ",
+    image: "/women_empowerment.jpg",
+  },
+  {
+    title: "Fruitful Pay-It-Forward Scholarship Model",
+    description:
+      "We believe in creating a self-sustaining cycle of generosity. Through our Pay-It-Forward Scholarship Model, students who have benefited from our support pledge to fund the education of future students once they become financially stable. This initiative fosters a sense of responsibility and community, ensuring that every generation lifts the next. ",
+    image: "/scholarship.jpg",
+  },
+  {
+    title: "Fruitful Emergency Assistance Program",
+    description:
+      "Our Fruitful Emergency Assistance Program is dedicated to providing immediate support to families facing urgent household matters. Whether it’s a sudden medical expense, housing crisis, or other emergency, we offer financial aid and resources to help families navigate these challenging situations. Our aim is to provide a safety net for those in need, ensuring stability and peace of mind. ",
+    image: "/emergency.jpg",
+  },
+  {
+    title: "Fruitful School Essentials Bank",
+    description:
+      "For many families, hidden costs such as books, stationery, and transport become obstacles to education. Our School Essentials Bank provides free learning materials, ensuring that students have the resources they need to focus on their studies without financial strain.",
+    image: "/school_essentials.jpg",
+  },
+  {
+    title: "Fruitful Debt Relief Initiative",
+    description:
+      "The Fruitful Debt Relief Initiative focuses on helping individuals and families pay off their loans and achieve financial stability. We offer personalized financial counseling, debt management plans, and access to resources that can help reduce the burden of debt. Our objective is to empower people to regain control of their finances and build a secure future.",
+    image: "/debt_relief.jpg",
+  },
+];
 
 const Projects = () => {
-  const [showDetails, setShowDetails] = useState({ project1: false, project2: false });
-
-  const toggleDetails = (project) => {
-    setShowDetails((prevState) => ({
-      ...prevState,
-      [project]: !prevState[project],
-    }));
-  };
-
   return (
-    <div className="min-h-screen p-4 sm:p-8 bg-gradient-to-b from-[#f3e6f9] to-[#ffffff] flex flex-col items-center overflow-x-hidden">
-      <div className="max-w-screen-lg w-full space-y-8">
-        {/* Project 1 */}
-        <div className="w-full rounded-xl shadow-lg bg-white p-4 sm:p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl box-border">
-          {!showDetails.project1 ? (
-            // Summary View for Project 1
-            <div className="flex flex-wrap items-start">
-              <img
-                src="/project1.jpg"
-                alt="Digital Banking Project 1"
-                className="w-full sm:w-1/4 h-auto rounded-lg mb-4 sm:mb-0"
-              />
-              <div className="sm:ml-6 flex-1">
-                <h2 className="text-xl sm:text-2xl font-semibold text-[#D5435C] mb-4">
-                  Fruitful Education
-                </h2>
-                <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
-                  Providing educational support to underprivileged children by addressing financial barriers and enabling uninterrupted learning opportunities.
-                </p>
-                <button
-                  className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-200"
-                  onClick={() => toggleDetails('project1')}
-                >
-                  View Cases
-                </button>
-              </div>
-            </div>
-          ) : (
-            // Detailed View for Project 1
-            <div>
-              <h2 className="text-xl sm:text-2xl font-semibold text-[#D5435C] mb-4">
-                Fruitful Education
-              </h2>
-              <ul className="space-y-4 text-base sm:text-lg text-gray-700">
-                <li className="p-4 rounded-lg bg-gray-50 shadow-md">
-                  <h3 className="text-lg font-bold mb-2">Case 1:</h3>
-                  <p>
-                    This case was about the educational expense of three siblings. The fees amount was to be collected.
-                  </p>
-                </li>
-                <li className="p-4 rounded-lg bg-gray-50 shadow-md">
-                  <h3 className="text-lg font-bold mb-2">Case 2:</h3>
-                  <p>
-                    The children of a widowed woman living in Rawalpindi will be able to go to school and continue their education. Amount is needed to pay the fees of the children.
-                  </p>
-                </li>
-                <li className="p-4 rounded-lg bg-gray-50 shadow-md">
-                  <h3 className="text-lg font-bold mb-2">Case 3:</h3>
-                  <p>
-                    Education of three siblings in Peshawar is the main focus of this case. The family struggles to save money for their children's schooling because they are living on the edge. Donations for this case will enable the children to continue their education and lessen the financial load on the family.
-                  </p>
-                </li>
-                <li className="p-4 rounded-lg bg-gray-50 shadow-md">
-                  <h3 className="text-lg font-bold mb-2">Case 4:</h3>
-                  <p>
-                    This case centers on the educational needs of four siblings from Barakahu, Islamabad. Currently under the sole guardianship of their mother, they face significant financial challenges. Your generous contributions can provide them with uninterrupted education.
-                  </p>
-                </li>
-              </ul>
-              <button
-                className="mt-6 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-200"
-                onClick={() => toggleDetails('project1')}
-              >
-                Back
-              </button>
-            </div>
-          )}
-        </div>
+    <div className="min-h-screen bg-gray-100 py-12 px-6">
+      <div className="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-md">
+        <h1 className="text-4xl font-bold text-red-600 mb-10 text-center">
+          Our Projects
+        </h1>
+        <p className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto mb-10">
+          At <strong>Fruitful Foundation</strong>, our flagship projects are at the heart of our mission to make quality education 
+          accessible to every child in Pakistan. These high-impact initiatives address the root causes of educational 
+          inequality, ensuring that financial barriers never stand in the way of a child’s future. Through innovation, 
+          collaboration, and sustainable solutions, we are creating long-term change, empowering students, and transforming communities.
+        </p>
 
-        {/* Project 2 */}
-        <div className="w-full rounded-xl shadow-lg bg-white p-4 sm:p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl box-border">
-          {!showDetails.project2 ? (
-            // Summary View for Project 2
-            <div className="flex flex-wrap items-start">
+        <div className="space-y-12">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="flex flex-col md:flex-row items-center gap-8 bg-gray-50 p-6 rounded-lg shadow-lg"
+            >
               <img
-                src="/project2.jpg"
-                alt="Digital Banking Project 2"
-                className="w-full sm:w-1/4 h-auto rounded-lg mb-4 sm:mb-0"
+                src={project.image}
+                alt={project.title}
+                className="w-full md:w-1/2 rounded-lg shadow-md object-cover"
               />
-              <div className="sm:ml-6 flex-1">
-                <h2 className="text-xl sm:text-2xl font-semibold text-[#D5435C] mb-4">
-                  Fruitful Household
+              <div className="md:w-1/2">
+                <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+                  {project.title}
                 </h2>
-                <p className="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
-                  Supporting families in financial distress by providing essentials, education, and care for those struggling to make ends meet.
-                </p>
-                <button
-                  className="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-200"
-                  onClick={() => toggleDetails('project2')}
-                >
-                  View Cases
-                </button>
+                <p className="text-lg text-gray-700">{project.description}</p>
               </div>
             </div>
-          ) : (
-            // Detailed View for Project 2
-            <div>
-              <h2 className="text-xl sm:text-2xl font-semibold text-[#D5435C] mb-4">
-                Fruitful Household
-              </h2>
-              <ul className="space-y-4 text-base sm:text-lg text-gray-700">
-                <li className="p-4 rounded-lg bg-gray-50 shadow-md">
-                  <h3 className="text-lg font-bold mb-2">Case 1:</h3>
-                  <p>
-                    Empowering education for daughters of a disabled hero. The man works hard for the family but is not able to pay the fees of his children.
-                  </p>
-                </li>
-                <li className="p-4 rounded-lg bg-gray-50 shadow-md">
-                  <h3 className="text-lg font-bold mb-2">Case 2:</h3>
-                  <p>
-                    The monthly support for a widow and her three children is the primary focus of this case. Located in the small town of Rawalpindi, Dhalla, Zainab Bibi is struggling to bear day-to-day expenses. We aim to collect enough donations to help her get food and medicine. Rent and education have already been managed.
-                  </p>
-                </li>
-                <li className="p-4 rounded-lg bg-gray-50 shadow-md">
-                  <h3 className="text-lg font-bold mb-2">Case 3:</h3>
-                  <p>
-                    In Talagang, a dedicated security guard is enduring immense financial strain while selflessly caring for his family. He is the sole provider for his four children and two sisters-in-law, who now depend on his support.
-                  </p>
-                </li>
-              </ul>
-              <button
-                className="mt-6 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-700 transition-colors duration-200"
-                onClick={() => toggleDetails('project2')}
-              >
-                Back
-              </button>
-            </div>
-          )}
+          ))}
         </div>
       </div>
     </div>
