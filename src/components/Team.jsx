@@ -49,6 +49,7 @@ const teamSections = [
       "Chaudhry Muhammad Shahram Akbar",
       "Urwah Rasheed",
       "Muhammad Saher",
+      "Talha Baloch",
     ],
   },
 ];
@@ -57,36 +58,28 @@ const Team = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-6">
       <div className="max-w-6xl mx-auto bg-white p-10 rounded-lg shadow-md">
-        <h1 className="text-4xl font-bold text-red-600 mb-8 text-center">
-          Meet Our Team
-        </h1>
+        <h1 className="text-4xl font-bold text-red-600 mb-8 text-center">Meet Our Team</h1>
 
         {teamSections.map((section, index) => (
           <div key={index} className="mb-12">
             <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">{section.title}</h2>
+            
+            {/* Responsive Grid Layout */}
             <div
-              className={`grid ${
-                section.title === "Founding Partners"
-                  ? "grid-cols-1 sm:grid-cols-2 gap-8 justify-center"
-                  : section.title === "Permanent Members"
-                  ? "grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-center"
-                  : section.centerAlign
-                  ? "justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-                  : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
-              } gap-6`}
+              className={`grid gap-6 ${
+                section.title === "Founding Partners" ? "grid-cols-1 sm:grid-cols-2 justify-center" :
+                section.title === "NUST Islamabad Interns" ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5" :
+                section.centerAlign ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center" :
+                "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+              }`}
             >
               {section.members.map((member, idx) => (
                 typeof member === "string" ? (
-                  <div key={idx} className="bg-gray-50 p-4 rounded-lg shadow-lg text-center text-lg font-medium text-gray-800">
+                  <div key={idx} className="bg-gray-50 p-4 rounded-lg shadow-md text-center text-lg font-medium text-gray-800">
                     {member}
                   </div>
                 ) : (
-                  <div
-                    key={idx}
-                    className={`bg-gray-50 p-6 rounded-lg shadow-lg text-center ${
-                      section.title === "Founding Partners" ? "w-full" : ""
-                    }`}
-                  >
+                  <div key={idx} className="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
                     {member.image && (
                       <img
                         src={member.image}
