@@ -18,7 +18,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {/* Rayan Malik */}
           <div className="flex flex-col items-center text-center">
-            <img src="/public/rayan.jpg" alt="Rayan Malik" className="w-40 h-40 rounded-full shadow-md mb-4 object-cover" />
+            <img src="/rayan.JPG" alt="Rayan Malik" className="w-40 h-40 rounded-full shadow-md mb-4 object-cover" />
             <h3 className="text-2xl font-semibold text-gray-800">Rayan Malik</h3>
             <p className="text-lg text-gray-600 mb-4">Founder & CEO</p>
             <p className="text-gray-700 italic max-w-md">
@@ -29,7 +29,7 @@ const Home = () => {
 
           {/* Muhammad Khuzaima Qureshi */}
           <div className="flex flex-col items-center text-center">
-            <img src="/public/khuzaima2.webp" alt="Muhammad Khuzaima Qureshi" className="w-40 h-40 rounded-full shadow-md mb-4 object-cover" />
+            <img src="/khuzaima2.webp" alt="Muhammad Khuzaima Qureshi" className="w-40 h-40 rounded-full shadow-md mb-4 object-cover" />
             <h3 className="text-2xl font-semibold text-gray-800">Muhammad Khuzaima Qureshi</h3>
             <p className="text-lg text-gray-600 mb-4">Co-Founder & COO</p>
             <p className="text-gray-700 italic max-w-md">

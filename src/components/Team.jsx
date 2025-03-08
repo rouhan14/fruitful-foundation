@@ -23,9 +23,9 @@ const teamSections = [
     centerAlign: false,
     fullWidth: true,
     members: [
-      { name: "Muhammad Shayan Khan Babar", role: "VP Impact and Sustainability", image: "public/shayyan.jpg" },
+      { name: "Muhammad Shayan Khan Babar", role: "VP Impact and Sustainability", image: "/shayyan.JPG" },
       { name: "Falak Sher", role: "VP Fundraising and Development", image: "/falak.jpg" },
-      { name: "Abdul Sammi", role: "VP Operations", image: "/public/sammi.jpg" },
+      { name: "Abdul Sammi", role: "VP Operations", image: "/sammi.JPG" },
       { name: "Ayna Dua", role: "VP Marketing & Communications", image: "/ayna.jpg" },
       { name: "Noor ul Harem", role: "VP Branding", image: "/noor.jpeg" },
     ],
