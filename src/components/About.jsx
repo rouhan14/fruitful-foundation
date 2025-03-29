@@ -10,7 +10,7 @@ const About = () => {
 
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
           At <strong>Fruitful Foundation</strong>, we believe that education is the key to breaking the cycle of poverty 
-          and fostering a brighter future for Pakistan’s children. As a dedicated social enterprise, we are committed 
+          and fostering a brighter future for Pakistan’s children. As a dedicated non-profit organisation, we are committed 
           to eliminating financial barriers that prevent children from accessing quality education. By leveraging 
           innovative funding models, community engagement, and strategic partnerships, we empower 
           underprivileged students to achieve their full potential.
