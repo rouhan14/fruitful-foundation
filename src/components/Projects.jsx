@@ -63,17 +63,22 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 rounded-lg shadow-lg text-center"
+              className="bg-gray-50 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start gap-6 text-left"
             >
+              {/* Project Image */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover rounded-md mb-4"
+                className="w-40 h-40 object-cover rounded-md flex-shrink-0"
               />
-              <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-                {project.title}
-              </h2>
-              <p className="text-lg text-gray-700">{project.description}</p>
+
+              {/* Project Content */}
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+                  {project.title}
+                </h2>
+                <p className="text-lg text-gray-700">{project.description}</p>
+              </div>
             </div>
           ))}
         </div>
