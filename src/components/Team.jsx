@@ -38,6 +38,7 @@ const TeamCard = ({ member }) => (
       <img
         src={member.image}
         alt={member.name}
+        loading="lazy"
         className="w-32 h-32 mx-auto rounded-full shadow-md object-cover mb-4"
       />
     )}
@@ -54,6 +55,7 @@ const CampusModule = ({ campus, onSeeMore }) => (
     <img
       src={campus.image}
       alt={campus.title}
+      loading="lazy"
       className="w-24 h-24 mx-auto mb-4 object-contain"
     />
     {/* Title + Short Desc */}
